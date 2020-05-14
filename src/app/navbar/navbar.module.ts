@@ -8,6 +8,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import {MatCardModule} from '@angular/material/card';
 import {MatMenuModule} from '@angular/material/menu';
+import {MatBadgeModule} from '@angular/material/badge';
 import { SidebarComponent } from './sidebar/sidebar.component';
 
 
@@ -24,7 +25,8 @@ import { SidebarComponent } from './sidebar/sidebar.component';
     MatIconModule,
     MatListModule,
     MatCardModule,
-    MatMenuModule
+    MatMenuModule,
+    MatBadgeModule
   ]
 })
 export class NavbarModule { }

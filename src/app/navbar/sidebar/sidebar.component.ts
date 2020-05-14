@@ -16,6 +16,7 @@ export class SidebarComponent {
       shareReplay()
     );
   isExpanded = false;
+  isSearch = false;
   constructor(private breakpointObserver: BreakpointObserver) {}
 
 }

@@ -35,8 +35,8 @@
           <a *ngIf="isExpanded" routerLink="/crm">Gestion CRM</a>
         </a>
         <a mat-list-item>
-          <mat-icon class="vertical-align" routerLink="/board">developer_board</mat-icon> 
-          <a *ngIf="isExpanded" routerLink="/board">Tableau Ressources</a>
+          <mat-icon class="vertical-align" routerLink="/ressourceBoard">developer_board</mat-icon> 
+          <a *ngIf="isExpanded" routerLink="/ressourceBoard">Tableau Ressources</a>
         </a>
       </mat-nav-list>
   </mat-sidenav>
@@ -46,12 +46,13 @@
       <mat-toolbar-row>
         <span>AfloERP</span>
         <span class="example-spacer"></span>
-        <button mat-icon-button >
-          <mat-icon>search</mat-icon>
+        <input matInput="search" *ngIf="isSearch" class="searchBar">
+        <button mat-icon-button (click)= "isSearch = !isSearch">
+          <mat-icon class="example-icon">search</mat-icon>
         </button>        
-        <mat-icon class="example-icon" aria-hidden="false" aria-label="Example delete icon">message</mat-icon>
+        <mat-icon class="example-icon" matBadge="15" matBadgeColor="warn">message</mat-icon>
         <mat-card class="example-card">
-          <img  mat-card-image src="https://material.angular.io/assets/img/examples/shiba1.jpg">
+          <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba1.jpg">
         </mat-card>
         <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
           <mat-icon>more_vert</mat-icon>
