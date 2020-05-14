@@ -38,6 +38,7 @@
           <mat-icon class="vertical-align" routerLink="/ressourceBoard">developer_board</mat-icon> 
           <a *ngIf="isExpanded" routerLink="/ressourceBoard">Tableau Ressources</a>
         </a>
+        
       </mat-nav-list>
   </mat-sidenav>
 
@@ -69,5 +70,6 @@
         </mat-menu>
       </mat-toolbar-row>
     </mat-toolbar>
+    <router-outlet></router-outlet>
   </mat-sidenav-content>
 </mat-sidenav-container>

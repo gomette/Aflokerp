@@ -10,6 +10,7 @@ import {MatCardModule} from '@angular/material/card';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatBadgeModule} from '@angular/material/badge';
 import { SidebarComponent } from './sidebar/sidebar.component';
+import { AppRoutingModule } from '../app-routing.module';
 
 
 
@@ -26,6 +27,7 @@ import { SidebarComponent } from './sidebar/sidebar.component';
     MatListModule,
     MatCardModule,
     MatMenuModule,
+    AppRoutingModule,
     MatBadgeModule
   ]
 })
