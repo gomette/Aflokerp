@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "projet-aflokkat"
+    }
+  },
+  "defaultProject": "projet-aflokkat",
+  "cli": {
+    "analytics": false
+  }
 }

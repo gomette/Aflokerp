@@ -1,0 +1,72 @@
+<!--<nav>
+  <a routerLink="/home">Heroes</a>
+</nav>
+<router-outlet></router-outlet>
+<app-messages></app-messages>-->
+
+<mat-sidenav-container class="example-container" fullscreen autosize>
+  <mat-sidenav #sidenav class="example-sidenav" mode="side" position="start" opened="true">
+
+      <!---Burger pour deplier le menu-->
+
+      <mat-nav-list>
+        <a mat-list-item></a>
+        <mat-divider></mat-divider>
+        <a mat-list-item>
+          <button mat-icon-button (click)="isExpanded = !isExpanded">
+            <mat-icon *ngIf="!isExpanded">reorder</mat-icon>
+            <mat-icon *ngIf="isExpanded">reorder</mat-icon>
+          </button>
+        </a>
+        <a mat-list-item >
+          <mat-icon class="vertical-align" routerLink="/home">home</mat-icon> 
+          <a *ngIf="isExpanded" routerLink="/home">Home</a>
+        </a>
+        <a mat-list-item>
+          <mat-icon class="vertical-align" routerLink="/dashboard">dashboard</mat-icon> 
+          <a *ngIf="isExpanded" routerLink="/dashboard">Dashboard</a>
+        </a>
+        <a mat-list-item>
+          <mat-icon class="vertical-align" routerLink="/catalogue">list</mat-icon> 
+          <a *ngIf="isExpanded" routerLink="/catalogue">Catalogue</a>
+        </a>
+        <a mat-list-item>
+          <mat-icon class="vertical-align" routerLink="/crm">person</mat-icon> 
+          <a *ngIf="isExpanded" routerLink="/crm">Gestion CRM</a>
+        </a>
+        <a mat-list-item>
+          <mat-icon class="vertical-align" routerLink="/board">developer_board</mat-icon> 
+          <a *ngIf="isExpanded" routerLink="/board">Tableau Ressources</a>
+        </a>
+      </mat-nav-list>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <mat-toolbar-row>
+        <span>AfloERP</span>
+        <span class="example-spacer"></span>
+        <button mat-icon-button >
+          <mat-icon>search</mat-icon>
+        </button>        
+        <mat-icon class="example-icon" aria-hidden="false" aria-label="Example delete icon">message</mat-icon>
+        <mat-card class="example-card">
+          <img  mat-card-image src="https://material.angular.io/assets/img/examples/shiba1.jpg">
+        </mat-card>
+        <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+          <mat-icon>more_vert</mat-icon>
+        </button>
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item>
+            <mat-icon>build</mat-icon>
+            <span>Options</span>
+          </button>
+          <button mat-menu-item>
+            <mat-icon>power_settings_new</mat-icon>
+            <span>Déconnexion</span>
+          </button>
+        </mat-menu>
+      </mat-toolbar-row>
+    </mat-toolbar>
+  </mat-sidenav-content>
+</mat-sidenav-container>
